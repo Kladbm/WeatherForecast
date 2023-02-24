@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface RequestsService {
 
-    List<Requests> getAllShards();
+    List<Requests> getAllRequests();
 
-    void saveShard(Requests requests);
+    void saveRequests(Requests requests);
 
-    Requests getShard(int id);
+    Requests getRequests(int id);
 
-    void deleteShard(int id);
+    void deleteRequests(int id);
 }

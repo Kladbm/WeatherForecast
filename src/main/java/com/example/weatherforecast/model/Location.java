@@ -1,7 +1,9 @@
 package com.example.weatherforecast.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class Location {
 
     @JsonProperty("name")

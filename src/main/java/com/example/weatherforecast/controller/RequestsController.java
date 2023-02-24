@@ -14,30 +14,30 @@ public class RequestsController {
     private RequestsService requestsService;
 
     @GetMapping("/requests")
-    public List<Requests> getAllShards() {
-        return requestsService.getAllShards();
+    public List<Requests> getAllRequests() {
+        return requestsService.getAllRequests();
     }
 
     @GetMapping("/requests/{id}")
-    public Requests getShard(@PathVariable int id) {
-        return requestsService.getShard(id);
+    public Requests getRequests(@PathVariable int id) {
+        return requestsService.getRequests(id);
     }
 
     @PostMapping("/requests")
-    public Requests addShard(@RequestBody Requests requests) {
-        requestsService.saveShard(requests);
+    public Requests addRequests(@RequestBody Requests requests) {
+        requestsService.saveRequests(requests);
         return requests;
     }
 
     @PutMapping("/requests")
-    public Requests updateShard(@RequestBody Requests requests) {
-        requestsService.saveShard(requests);
+    public Requests updateRequests(@RequestBody Requests requests) {
+        requestsService.saveRequests(requests);
         return requests;
     }
 
     @DeleteMapping("/requests/{id}")
-    public String deleteShard(@PathVariable int id) {
-        requestsService.deleteShard(id);
+    public String deleteRequests(@PathVariable int id) {
+        requestsService.deleteRequests(id);
         return "Request with ID: " + id + " was deleted";
     }
 }

@@ -15,17 +15,17 @@ public class RequestsServiceImpl implements RequestsService {
     private RequestsRepository requestsRepository;
 
     @Override
-    public List<Requests> getAllShards() {
+    public List<Requests> getAllRequests() {
         return requestsRepository.findAll();
     }
 
     @Override
-    public void saveShard(Requests requests) {
+    public void saveRequests(Requests requests) {
         requestsRepository.save(requests);
     }
 
     @Override
-    public Requests getShard(int id) {
+    public Requests getRequests(int id) {
         Requests requests = null;
 
         Optional<Requests> optional = requestsRepository.findById(id);
@@ -37,7 +37,7 @@ public class RequestsServiceImpl implements RequestsService {
     }
 
     @Override
-    public void deleteShard(int id) {
+    public void deleteRequests(int id) {
         requestsRepository.deleteById(id);
     }
 }

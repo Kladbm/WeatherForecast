@@ -1,7 +1,9 @@
 package com.example.weatherforecast.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class Current {
 
     @JsonProperty("last_updated")
@@ -18,9 +20,6 @@ public class Current {
 
     @JsonProperty("is_day")
     private int isDay;
-
-    @JsonProperty("condition")
-    private Condition condition;
 
     @JsonProperty("wind_mph")
     private double windMph;
