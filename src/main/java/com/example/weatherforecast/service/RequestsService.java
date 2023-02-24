@@ -13,4 +13,8 @@ public interface RequestsService {
     Requests getRequests(int id);
 
     void deleteRequests(int id);
+
+    Requests findByName(String name);
+
+    void deleteByName(String name);
 }
